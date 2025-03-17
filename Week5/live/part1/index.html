@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="posts"></div>
+
+
+    <script>
+        const fetchPosts = async ()=> {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+            const arr = response.data
+            for(let i = 0; i < arr.length; i++){
+                document.getElementById('posts').innerHTML += (`<div> ${arr[i].id}  ${arr[i].body} </div>`)
+            }   
+        }
+        fetchPosts();
+    </script>
+
+</body>
+</html>

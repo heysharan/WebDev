@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo list</h1>
+	  <h4>1. Take class</h4>
+	  <h4>2. Go out to eat</h4>
+	  <div>
+	    <input type="text"></input>
+	    <button>Add Todo</button>
+	  </div>
+	  <script>
+        let i = 0;
+        const timer = () => {
+            document.querySelectorAll('h4')[1].innerHTML = i;
+            i++;
+        }
+        setInterval(timer,1000)
+      </script>
+</body>
+</html>

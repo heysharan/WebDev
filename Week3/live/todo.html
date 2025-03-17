@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"></input>
+    <button onclick="addTodo()">Add Todo</button>
+
+    <script>
+        let ctr = 1;
+        const addTodo = () => {
+            const inputEle = document.querySelector('input');
+            const value = inputEle.value;
+
+            const newDivEle = document.createElement('div');
+            newDivEle.setAttribute('id', ctr);  // sets id for the div created, ( use - for deleting the div. )
+            newDivEle.innerHTML = `<div>${value}</div> <button onClick = "deleteTodo(${ctr})"> Delete </button>`;
+
+            document.querySelector('body').appendChild(newDivEle)
+            ctr++;
+        }
+        const deleteTodo = (index) => {
+            const deleteEle = document.getElementById(index)
+            deleteEle.parentNode.removeChild(deleteEle)
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"></input>
+    <button onclick="addTodo()">Add Todo</button>
+
+    <script>
+        let ctr = 1;
+        const addTodo = () =>{
+            const addEle = document.querySelector('input');   //selecting the input text box
+
+            const value = addEle.value;                         //getting the value from the input text box
+
+            const newDivEle = document.createElement('div');    //creating a new div
+ 
+            newDivEle.setAttribute('id', ctr);                  //setting unique id for the div's created above ( use - for deleting todo's ) 
+            
+            newDivEle.innerHTML = `<div>${value}</div> <button onClick='deleteTodo(${ctr})'>Delete</button>`;  // creating a div and a button and inside div assign the values from the input box
+
+            document.querySelector('body').appendChild(newDivEle)  //appending the values.
+        
+            ctr++;
+        }
+
+        const deleteTodo = (index) => {
+            const deleteTodo = document.getElementById(index);  //selecting the div using the id
+            deleteTodo.parentNode.removeChild(deleteTodo);     //removing the todo
+        }
+    </script>
+</body>
+</html>

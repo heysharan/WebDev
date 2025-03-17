@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo list</h1>
+    <h4 class="todo">1. Take Class</h4>
+    <h4 class="todo">2. Go to Gym</h4>
+    <div>  
+        <input type="text"></input>
+        <button onclick="addTodo()">Add Todo</button>
+    </div>
+    <script>
+        const addTodo = () => {
+        // const inputEle = document.querySelector('input')
+        // console.log(inputEle.value)
+        // const h4Ele = document.querySelectorAll('h4')
+        // console.log(h4Ele)
+        // console.log(h4Ele[1].innerHTML)
+        // const buttonEle = document.querySelector('button')
+        // console.log(buttonEle.innerHTML)
+        // const todo1 = document.querySelector('#todo1')
+        // console.log(todo1)
+        const todo = document.getElementsByClassName('todo');
+        console.log(todo);  //prints the array of todo
+        console.log(todo[0]); //prints the first todo
+
+        const todo1 = document.querySelectorAll('.todo')
+        console.log(todo1)  //prints the array of todo but uses querySelector
+        console.log(todo1[1]); //prints the first todo
+        } 
+    </script>
+</body>
+</html>
