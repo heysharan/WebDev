@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Counter</title>
+</head>
+<body>
+    <script>
+        const onButtonPress = () => {
+            const currentValue = document.getElementById('btn').innerHTML;
+            const currentCounter = currentValue.split(" ")[1]; //split() -> method is used on a string to divide it into an array based on a specified separator. The result is always an array.
+            // the above line gets the secound value i.e., the number from the innerHTML
+            const newCounter = parseInt(currentCounter) + 1;
+            document.getElementById('btn').innerHTML = "Counter " + newCounter;
+        }
+    </script>
+    <body>
+        <button id="btn" onclick="onButtonPress()">Counter 0</button>
+    </body>
+</body>
+</html>
