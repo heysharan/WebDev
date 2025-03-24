@@ -89,13 +89,39 @@
 
 // export default App
 
-import { useState } from "react";
-import { Notifications } from "./Notifications";
+
+// import { Notifications } from "./Notifications";
+
+// const App = () => {
+//   return (
+//     <div style={{ backgroundColor: "#dfe6e9", height: "100vh" }}>
+//       <Notifications />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+// import { TopBar } from "./TopBar";
+
+// const App = () => {
+//   return (
+//     <div style={{ backgroundColor: "#dfe6e9", height: "100vh" }}>
+//       <TopBar />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+import { CleanUp } from "./CleanUp";
 
 const App = () => {
   return (
     <div style={{ backgroundColor: "#dfe6e9", height: "100vh" }}>
-      <Notifications />
+      <CleanUp />
     </div>
   );
 };
