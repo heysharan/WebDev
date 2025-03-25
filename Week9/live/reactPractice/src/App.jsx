@@ -89,7 +89,6 @@
 
 // export default App
 
-
 // import { Notifications } from "./Notifications";
 
 // const App = () => {
@@ -101,7 +100,6 @@
 // };
 
 // export default App;
-
 
 // import { TopBar } from "./TopBar";
 
@@ -115,13 +113,32 @@
 
 // export default App;
 
+// import { CleanUp } from "./CleanUp";
 
-import { CleanUp } from "./CleanUp";
+// const App = () => {
+//   return (
+//     <div style={{ backgroundColor: "#dfe6e9", height: "100vh" }}>
+//       <CleanUp />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import { Card } from "./Card";
 
 const App = () => {
   return (
-    <div style={{ backgroundColor: "#dfe6e9", height: "100vh" }}>
-      <CleanUp />
+    <div style={{ backgroundColor: "white", height: "100vh" }}>
+      <Card>
+        <div>
+          <h2>Card Title</h2> <p>This is some content inside the card</p>
+        </div>
+      </Card>
+      <Card>
+        <h2>Another Card</h2>{" "}
+        <p>This is some content inside the another card</p>
+      </Card>
     </div>
   );
 };
