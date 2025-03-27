@@ -125,37 +125,128 @@
 
 // export default App;
 
-import { Card } from "./Card";
+// import { Card } from "./Card";
+
+// const App = () => {
+//   return (
+//     <div style={{ backgroundColor: "white", height: "100vh" }}>
+//       <Card>
+//         <div>
+//           <h2>Card Title</h2> <p>This is some content inside the card</p>
+//         </div>
+//       </Card>
+//       <Card>
+//         <h2>Another Card</h2>{" "}
+//         <p>This is some content inside the another card</p>
+//       </Card>
+//       <Card>
+//         <h2>Another Card 2</h2>{" "}
+//         <p>This is some content inside the another card</p>
+//       </Card>
+//       <Card>
+//         <h2>Another Card 3</h2>{" "}
+//         <p>This is some content inside the another card</p>
+//       </Card>
+//       <Card>
+//         <h2>Another Card 4</h2>{" "}
+//         <p>This is some content inside the another card</p>
+//       </Card>
+//       <Card>
+//         <h2>Another Card</h2>{" "}
+//         <p>This is some content inside the another card</p>
+//       </Card>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// import { ListsAndKeys } from "./ListsAndKeys";
+
+// const App = () => {
+//   const items = [
+//     {
+//       id: 1,
+//       title: "go to gym",
+//       done: true
+//     },
+//     {
+//       id: 2,
+//       title: "finish react",
+//       done: false
+//     },
+//     {
+//       id: 3,
+//       title: "eat properly",
+//       done: true
+//     },
+//     {
+//       id: 4,
+//       title: "sleep well",
+//       done: false
+//     },
+//   ];
+
+//   return (
+//     <div style={{ backgroundColor: "white", height: "100vh" }}>
+//       <ListsAndKeys>{ items }</ListsAndKeys>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// import { ClassComponent } from "./ClassComponent";
+
+// const App = () => {
+
+//   return (
+//     <div style={{ backgroundColor: "white", height: "100vh" }}>
+//       <ClassComponent> </ClassComponent>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import { ErrorBoundary } from "./ErrorBoundary";
+import { Fragment } from "react";
 
 const App = () => {
+  const RedCard = () => {
+    throw new Error("Error while rendering !");
+
+    return (
+      <div style={{ background: "red", borderRadius: 20, padding: 20 }}>
+        Hi there !
+      </div>
+    );
+  };
+
+  const BlueCard = () => {
+    return (
+      <div
+        style={{
+          background: "blue",
+          borderRadius: 20,
+          padding: 20,
+          margin: 20,
+        }}
+      >
+        Hi there !
+      </div>
+    );
+  };
+
   return (
-    <div style={{ backgroundColor: "white", height: "100vh" }}>
-      <Card>
-        <div>
-          <h2>Card Title</h2> <p>This is some content inside the card</p>
-        </div>
-      </Card>
-      <Card>
-        <h2>Another Card</h2>{" "}
-        <p>This is some content inside the another card</p>
-      </Card>
-      <Card>
-        <h2>Another Card 2</h2>{" "}
-        <p>This is some content inside the another card</p>
-      </Card>
-      <Card>
-        <h2>Another Card 3</h2>{" "}
-        <p>This is some content inside the another card</p>
-      </Card>
-      <Card>
-        <h2>Another Card 4</h2>{" "}
-        <p>This is some content inside the another card</p>
-      </Card>
-      <Card>
-        <h2>Another Card</h2>{" "}
-        <p>This is some content inside the another card</p>
-      </Card>
-    </div>
+    <Fragment style={{ backgroundColor: "white", height: "100vh" }}>
+      <ErrorBoundary>
+        <RedCard />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <BlueCard />
+      </ErrorBoundary>
+    </Fragment>
   );
 };
 
