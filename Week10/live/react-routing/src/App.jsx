@@ -14,11 +14,11 @@ const App = () => {
           <Route path="/" element={<Layout />} >
           <Route path="/" element={<Landing />} />
           <Route
-            path="/neet/online-coaching-class-11"
+            path="/neet/online-class-11"
             element={<Class11Program />}
           />
           <Route
-            path="/neet/online-coaching-class-12"
+            path="/neet/online-class-12"
             element={<Class12Program />}
           />
           <Route path="*" element={<NoPage />} />
