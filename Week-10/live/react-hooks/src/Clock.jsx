@@ -67,7 +67,7 @@ export const Clock = () => {
 
 */}
 
-{/* 3nd Approach - using useState() */}
+{/* 3nd Approach - using useState() 
 
 import { useState, useRef } from "react"
 
@@ -99,4 +99,32 @@ export const Clock = () => {
         <button onClick={stopClock}>Stop</button>
     </div>
    ) 
+}
+
+*/}
+
+import { useState, useRef } from "react";
+
+export const Clock = () => {
+    const [ currentValue, setCurrentValue ] = useState(0);
+    const timerRef = useRef(null);
+
+    const startClock = () => {
+        const timer = setInterval(() => {
+            setCurrentValue(currentValue => currentValue + 1)
+        }, 1000)
+        timerRef.current = timer
+    }
+
+    const stopClock = () => {
+        clearInterval(timerRef.current)
+    }
+
+    return (
+        <div>
+            {currentValue} <br />
+            <button onClick={startClock} >Start</button>
+            <button onClick={stopClock} >Stop</button>
+        </div>
+    )
 }
