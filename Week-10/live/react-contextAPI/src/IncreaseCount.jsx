@@ -8,4 +8,4 @@ export const IncreaseCount = () => {
         <button onClick={() => (setCount(count => count + 1))}>Increase</button>
     </>
     )
-}
+} 
