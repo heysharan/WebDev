@@ -1,14 +1,6 @@
 import { atom } from 'recoil'
 
 export const counterAtom = atom({
-    key: 'counter',
-    default: 0
+    default: 0,
+    key: 'counter'
 })
-
-
-// import { atom } from 'recoil'
-
-// export const counterAtom = atom({
-//     key: 'counter',
-//     default: 0
-// })

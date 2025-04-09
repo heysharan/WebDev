@@ -1,13 +1,14 @@
-import { CountDecrease } from "./CountDecreaseRecoil"
-import { CountIncrease } from "./CountIncreaseRecoil"
-import { CountValue } from "./CountValueRecoil"
+import { CountDecreaseRecoil } from "./CountDecreaseRecoil"
+import { CountIncreaseRecoil } from "./CountIncreaseRecoil"
+import { CountValueRecoil } from "./CountValueRecoil"
 
-export const Counter = () => {
-    return (
-      <>
-      <CountValue /> <br />
-      <CountIncrease />
-      <CountDecrease />
-      </>
-    )
-  }
+export const CounterRecoil = () => {
+  return (
+    <>
+    <CountValueRecoil />
+    <CountIncreaseRecoil />
+    <CountDecreaseRecoil />
+    </>
+
+  )
+}
