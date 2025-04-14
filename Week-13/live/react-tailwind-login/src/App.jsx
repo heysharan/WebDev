@@ -6,7 +6,7 @@ import { LoginOtp } from "../components/LoginOtp";
 function App() {
   return(
     <>
-      <LoginOtp />
+      <AgeVerification />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { Button } from "./Buttons";
+import { Otp } from "./Otp";
 
 export const LoginOtp = () => {
 
@@ -19,6 +20,7 @@ export const LoginOtp = () => {
         <p className="text-white text-sm">
           Please enter the verification code sent to your email id
         </p>
+        <Otp number={6}/>
 
       </div>
       <div className="flex flex-col items-center justify-center pt-6 gap-1">
