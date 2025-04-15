@@ -41,36 +41,61 @@
 //   );
 // };
 
-import { useState } from "react";
+// import { useState } from "react";
+// import { HalfMoon, SunLight } from "iconoir-react";
+
+// export const DarkLightMode = () => {
+//   const [isDark, setIsDark] = useState(
+//     document.documentElement.classList.contains("dark")
+//   );
+
+//   const darkToggle = () => {
+//     const html = document.documentElement;
+//     html.classList.toggle("dark");
+//     setIsDark(html.classList.contains("dark"));
+//   };
+
+//   return (
+//     <div className="h-screen bg-white text-black dark:text-white dark:bg-black flex justify-end">
+//       <div className="m-4">
+//       {isDark ? (
+//         <SunLight
+//           onClick={darkToggle}
+//           className="w-8 h-8 cursor-pointer text-white"
+//         />
+//       ) : (
+//         <HalfMoon
+//           onClick={darkToggle}
+//           className="w-8 h-8 cursor-pointer text-black"
+//         />
+//       )}
+//       </div>
+//     </div>
+//   );
+// };
 import { HalfMoon, SunLight } from "iconoir-react";
+import { useState } from "react";
 
 export const DarkLightMode = () => {
-  const [isDark, setIsDark] = useState(
-    document.documentElement.classList.contains("dark")
-  );
-
-  const darkToggle = () => {
-    const html = document.documentElement;
-    html.classList.toggle("dark");
-    setIsDark(html.classList.contains("dark"));
+  const [ isDark, setIsDark ] = useState(
+    document.querySelector('html').classList.contains('dark')
+  )
+  const darkMode = () => {
+    const html = document.querySelector('html')
+    html.classList.toggle('dark')
+    setIsDark(html.classList.contains('dark'))
   };
 
   return (
-    <div className="h-screen bg-white text-black dark:text-white dark:bg-black flex justify-end">
+    <div className="h-screen bg-white text-black dark:bg-black dark:text-white flex justify-end">
       <div className="m-4">
       {isDark ? (
-        <SunLight
-          onClick={darkToggle}
-          className="w-8 h-8 cursor-pointer text-white"
-        />
+        <SunLight onClick={darkMode} className="w-7 h-7 cursor-pointer"/>
       ) : (
-        <HalfMoon
-          onClick={darkToggle}
-          className="w-8 h-8 cursor-pointer text-black"
-        />
+        <HalfMoon onClick={darkMode} className="w-7 h-7 cursor-pointer"/>
       )}
       </div>
+
     </div>
   );
 };
-
