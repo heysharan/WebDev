@@ -4,11 +4,11 @@ import { Login } from "../components/Login";
 import { LoginOtp } from "../components/LoginOtp";
 
 function App() {
-  return(
-    <>
+  return (
+    <div>
       <AgeVerification />
-    </>
-  )
+    </div>
+  );
 }
 
 export default App;
@@ -16,5 +16,4 @@ export default App;
 {
   /* flex flex-col items-center justify-center px-4 
   CSS ----- style={{display: 'flex', justifyContent: 'center'}} */
-
 }

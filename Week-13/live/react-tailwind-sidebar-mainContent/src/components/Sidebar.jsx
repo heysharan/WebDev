@@ -7,7 +7,6 @@ import {
   Wallet,
 } from "iconoir-react";
 import SharanPhoto from "../assets/SharanPhoto.jpg";
-import { SidebarButton } from "./SidebarButton";
 
 export const Sidebar = ({ setSidebarOpen, sidebarOpen }) => {
   if (sidebarOpen) {

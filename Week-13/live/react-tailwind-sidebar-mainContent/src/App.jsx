@@ -17,9 +17,9 @@ function App() {
     }
   }, [isDesktop])
   return (
-    <div className="flex">
-      <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen}/>
-      <MainContent sidebarOpen={sidebarOpen}/>
+    <div>
+
+      <DarkLightMode />
     </div> 
   );
 }
