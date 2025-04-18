@@ -1,59 +1,6 @@
-// let x: number | string = 1;
+/* interface with objects in ts */
 
-import { classicNameResolver } from "typescript"
-
-// x = 'Sharan'
-
-// console.log(x)
-
-
-// const firstProgram = (firstName : string) => {
-//     console.log(`Hello ${firstName}`)
-// }
-
-// firstProgram('Sharan')
-
-
-// const sum = (a: number, b: number) => {
-//     return a + b
-// }
-
-// console.log(sum(2, 4))
-
-
-
-// const user = (age: number) => {
-//     if(age > 18) return true
-//     else return false
-// }
-
-// console.log(user(23));
-
-
-
-// const callBackFn = (fn: () => void) => {
-//     setTimeout(fn, 1000)
-// }
-
-// callBackFn(() => {
-//     console.log('Hi there from setTimout')
-// })
-
-
-// const delayedCall = (fn: (a: string) => void) => {
-//     return setTimeout(fn, 1000)
-// }
-
-// const greet = (firstName: string) => {
-//     console.log(`Hello ${firstName}`)
-// }
-
-// delayedCall(() => greet('Sharan'))
-
-
-
-
-
+// (1)
 // interface User {
 //     name: string,
 //     age: number,
@@ -81,7 +28,7 @@ import { classicNameResolver } from "typescript"
 // console.log(isLegal(user))
 
 
-
+// (2)
 // interface User {
 //     name: string,
 //     age: number,
@@ -106,7 +53,7 @@ import { classicNameResolver } from "typescript"
 
 
 
-
+// (3)
 // interface User {
 //     name: string,
 //     age: number,
@@ -136,7 +83,7 @@ import { classicNameResolver } from "typescript"
 // console.log(isLegal(user))
 
 
-
+// (4)
 // interface Address {    // we are using a seperate interface for address since both home and office address requirement is the same, so we can avoid code repetition
 //     city: string,      
 //     country: string,
@@ -183,12 +130,12 @@ import { classicNameResolver } from "typescript"
 //         officePincode: office.address.pincode
 //     }
 // }
-
-
 // console.log(userProfile(user, office))
 
 
+/* interface implemented in class in ts */
 
+// (1)
 // interface People {
 //     name: string,
 //     age: number,
@@ -205,7 +152,7 @@ import { classicNameResolver } from "typescript"
 
 // console.log(person.greet())
 
-
+// (2)
 // interface People {
 //     name: string,
 //     age: number,
@@ -224,7 +171,7 @@ import { classicNameResolver } from "typescript"
 // console.log(someone.age)
 
 
-
+// (3)
 // interface People {
 //     name: string,
 //     age: number,
@@ -249,7 +196,10 @@ import { classicNameResolver } from "typescript"
 // console.log(someone.isLegal())
 
 
+/* extends in class */
 
+
+// (1)
 // interface People {
 //     name: string,
 //     age: number,
@@ -288,6 +238,7 @@ import { classicNameResolver } from "typescript"
 // console.log(someone.isLegal())
 
 
+// (2)
 // class Manager {
 //     name: string;
 //     age: number;
@@ -324,7 +275,7 @@ import { classicNameResolver } from "typescript"
 // console.log(someone.name, someone.age, someone.level, someone.role, someone.isLegal())
 
 
-
+// (3)
 // class Shape {
 //     area = () =>  {
 //         return 'Hi Im the area from Shape Class'
@@ -347,6 +298,9 @@ import { classicNameResolver } from "typescript"
 // console.log(r.width, r.height, r.area())
 
 
+
+
+/* abstract class vs interface */
 
 // abstract class User { 
 
@@ -376,22 +330,28 @@ import { classicNameResolver } from "typescript"
 // console.log(u.hello(), u.name, u.greet())
 
 
-interface User {
-    firstName: string;
-    lastName: string;
-    age: number
-}
 
-const filterUsers = (users: User[]) => {
-    return users.filter((user) => user.age > 18)
-}
 
-console.log(filterUsers([{
-    firstName: 'Sharan',
-    lastName: 'C M',
-    age: 23
-},{
-    firstName: 'Guhan',
-    lastName: 'C M',
-    age: 176
-}]))
+// interface User { 
+//     name: string
+//     greet: () => string
+//     hello: () => string
+
+// }
+
+// class Employee implements User {
+    
+//     constructor(public name: string) {
+//         this.name = name
+//     }
+
+//     hello = () => {
+//         return 'Hello from abstract User class'
+//     }
+//     greet = () => {
+//         return `Hello ${this.name}`
+//     }
+// }
+
+// const u = new Employee('Sharan')
+// console.log(u.hello(), u.name, u.greet())
