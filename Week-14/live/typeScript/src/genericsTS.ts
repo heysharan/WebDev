@@ -46,14 +46,14 @@
 // console.log(el2.toUpperCase(), el1, el2, el3, el3, el4)   // now problem (2) is solved since TS is automatically able to infer the type
 
 
-const getFirstElement = <T>(arg: T[]) : T => {
-    return arg[0];
-}
+// const getFirstElement = <T>(arg: T[]) : T => {
+//     return arg[0];
+// }
 
-interface User { 
-    name: string
-}
+// interface User { 
+//     name: string
+// }
 
-const el1 = getFirstElement<User>([{ name: 'Sharan'}, {name: 'Guhan'}])
+// const el1 = getFirstElement<User>([{ name: 'Sharan'}, {name: 'Guhan'}])
 
-console.log(el1)
+// console.log(el1)
