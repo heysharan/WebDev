@@ -134,3 +134,21 @@
 
 // // this is the most optimal method to update an user in the database, since we dont need to update in two different places
 // // MOST OPTIMAL SOLUTION FOR THE PROBLEM 
+
+
+
+
+
+// interface User {
+//     id: string,
+//     name: string,
+//     age: number,
+//     email: string,
+//     password: string
+// }
+
+// type updateUser = Pick<User, 'name' | 'age' | 'password' >
+
+// const updateUserDb = (updateUser: updateUser) => {
+//     // database call for updating the user table
+// }
