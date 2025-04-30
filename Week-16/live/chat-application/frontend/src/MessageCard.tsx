@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { ChatIcon } from "./icons/ChatIcon"
 
 export const MessageCard = () => {
-    const [messages, setMessages] = useState([])
+    const [messages, setMessages] = useState(['Hello'])
     const inputRef = useRef<HTMLInputElement>(null)
     const wsRef = useRef<WebSocket>(null);
     const messageRef = useRef<HTMLDivElement>(null);
