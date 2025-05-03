@@ -13,7 +13,9 @@
   "description": "",
   "dependencies": {
     "@types/express": "^5.0.1",
+    "@types/pg": "^8.11.14",
     "express": "^5.1.0",
+    "pg": "^8.15.6",
     "typescript": "^5.8.3",
     "zod": "^3.24.3"
   }

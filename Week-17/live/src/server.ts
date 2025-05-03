@@ -1,28 +1,28 @@
-// import express from 'express';
-
-// const app = express();
-
-// app.get('/', (req, res) => {
-//     res.json({
-//         message: "Hello"
-//     })
-// })
-
-// app.listen(3000, () => {
-//     console.log(`PORT running on 3000`)
-// })
-
-
+import { Client } from 'pg';
 import express from 'express';
 
-const app = express();
+const pgClient = new Client({
+    user: "neondb_owner",
+    password: "npg_2qZtGEJ1NAjQ",
+    port: 5432,
+    host: "ep-gentle-snow-a4fgzbzm-pooler.us-east-1.aws.neon.tech",
+    database: 'neondb',
+    ssl: true
+});
 
-app.get('/', (req, res) => {
-    res.json({
-        message: "Hello"
-    })
-})
+const main = async () => {
+    await pgClient.connect();
 
-app.listen(3000, () => {
-    console.log(`PORT running on 3000`)
-})
+    const response = await pgClient.query(`CREATE TABLE todos (
+        id SERIAL PRIMARY key,
+        title VARCHAR(50),
+        description VARCHAR(100),
+        done BOOLEAN
+        );`)
+    console.log(response.rows);
+}
+
+main();
+
+
+ 
