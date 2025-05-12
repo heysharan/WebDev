@@ -1,4 +1,10 @@
-export default function Home () {
+"use client"
+export default function SigninComponent () {
+    const handler = () => {
+        console.log('From handler')
+    }
+
+
     return (
         <div className="bg-gray-100 w-screen h-screen flex justify-center items-center">
             <div className=" bg-white rounded-2xl w-120 h-94 border-2 border-gray-200">
@@ -15,7 +21,7 @@ export default function Home () {
                     <input type="password" className="p-2 border border-gray-300 rounded-lg"></input>
                 </div>
                 <div className="flex justify-center items-center pt-3 pr-5 pb-5 pl-5">
-                    <Button variant='primary' text='Login' fullWidth={true}/>
+                    <Button variant='primary' text='Login' fullWidth={true} onClick={handler}/>
                 </div>
             </div>
         </div>

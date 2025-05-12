@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function SignupComponent() {
   return (
     <div className="bg-gray-100 w-screen h-screen flex justify-center items-center">
       <div className=" bg-white rounded-2xl w-120 h-137 border-2 border-gray-200">
