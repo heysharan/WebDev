@@ -41,33 +41,33 @@
 
 // Server Component
 
-import axios from 'axios'
+// import axios from 'axios'
 
-const getData = async () => {
-  const response = await axios.get<User>('http://localhost:3001/api/v1/user/details')
-  return response.data
-}
+// const getData = async () => {
+//   const response = await axios.get<User>('http://localhost:3001/api/v1/user/details')
+//   return response.data
+// }
 
-interface User {
-  name: string,
-  email: string,
-  address: {
-     city?: string,
-     state?: string,
-     houseNumber?: number
-    }
-}
+// interface User {
+//   name: string,
+//   email: string,
+//   address: {
+//      city?: string,
+//      state?: string,
+//      houseNumber?: number
+//     }
+// }
 
-export default async function Home() { 
+// export default async function Home() { 
 
-  const user: User = await getData();
+//   const user: User = await getData();
 
-  return (
-    <div className='flex items-center justify-center h-screen'>
-      <div className='border border-gray-500 rounded-lg flex flex-col p-5'>
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
-      </div>  
-    </div>
-  );
-}
+//   return (
+//     <div className='flex items-center justify-center h-screen'>
+//       <div className='border border-gray-500 rounded-lg flex flex-col p-5'>
+//         <p>Name: {user.name}</p>
+//         <p>Email: {user.email}</p>
+//       </div>  
+//     </div>
+//   );
+// }
