@@ -9,6 +9,7 @@ const prismaClient = new PrismaClient({
 export async function POST(req: NextRequest) {
 
     const data = await req.json()
+
     const hashedPassword = await argon2.hash(data.password)
 
     await prismaClient.user.create({

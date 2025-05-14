@@ -3,6 +3,7 @@ import { useRef } from "react"
 import axios from "axios"
 import { useRouter } from "next/navigation"
 
+
 export default function Signup() {
     const router = useRouter()
 
@@ -24,6 +25,7 @@ export default function Signup() {
         })
         router.push('/signin')
     }
+
 
     return (
         <div className="w-screen h-screen flex justify-center items-center">
