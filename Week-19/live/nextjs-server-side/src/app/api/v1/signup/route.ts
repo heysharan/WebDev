@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@/generated/prisma";
+import prismaClient from '../../../../db'
 import argon2 from 'argon2'
 
-const prismaClient = new PrismaClient({
-   log: ['query', 'info', 'warn', 'error'] 
-})
 
 export async function POST(req: NextRequest) {
 
