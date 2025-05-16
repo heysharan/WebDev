@@ -2,19 +2,31 @@
 
 import { useRef } from "react"
 import axios  from "axios"
+import { signin } from "@/actions/user"
 
 export default function Signin() {
     const emailRef = useRef<HTMLInputElement>(null)
     const passwordRef = useRef<HTMLInputElement>(null)
 
-    const submit = () => {
-        axios.post('http://localhost:3000/api/v1/signin', {
-            email: emailRef.current?.value, 
-            password: passwordRef.current?.value
+    const submit = async () => {
+        // axios.post('http://localhost:3000/api/v1/signin', {
+        //     email: emailRef.current?.value, 
+        //     password: passwordRef.current?.value
 
-        }).then(response => {
-            console.log(response.data)
-        })    
+        // }).then(response => {
+        //     console.log(response.data)
+        // })    
+
+        // 1 - using (.then)
+        // signin(emailRef.current?.value!, passwordRef.current?.value!)
+        //     .then(res => {
+        //         console.log(res)
+        // })
+
+        //2. - using await
+        const res = await signin(emailRef.current?.value!, passwordRef.current?.value!)
+        console.log(res)
+
     }
 
     return (

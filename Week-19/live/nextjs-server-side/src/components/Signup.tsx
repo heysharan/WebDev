@@ -2,6 +2,7 @@
 import { useRef } from "react"
 import axios from "axios"
 import { useRouter } from "next/navigation"
+import { signup } from "@/actions/user"
 
 
 export default function Signup() {
@@ -13,16 +14,18 @@ export default function Signup() {
     const passwordRef = useRef<HTMLInputElement>(null)
 
 
-    const submit = () => {
-        axios.post('http://localhost:3000/api/v1/signup', {
-            firstname: firstnameRef.current?.value,
-            lastname: lastnameRef.current?.value,
-            email: emailRef.current?.value,
-            password: passwordRef.current?.value
+    const submit = async () => {
+        // axios.post('http://localhost:3000/api/v1/signup', {
+        //     firstname: firstnameRef.current?.value,
+        //     lastname: lastnameRef.current?.value,
+        //     email: emailRef.current?.value,
+        //     password: passwordRef.current?.value
 
-        }).then(response => {
-            console.log(response.data)
-        })
+        // }).then(response => {
+        //     console.log(response.data)
+        // })
+        const res = await signup(firstnameRef.current?.value!, lastnameRef.current?.value!, emailRef.current?.value!, passwordRef.current?.value!)
+        console.log(res)
         router.push('/signin')
     }
 
