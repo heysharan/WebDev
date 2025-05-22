@@ -7,7 +7,7 @@ export default function Signin() {
     const passwordRef = useRef<HTMLInputElement>(null);
 
     const signin = async () => {
-        const res: any = await axios.post('http://localhost:3000/api/signin', {
+        const res: any = await axios.post('http://localhost:3000/bad-approach-jwt-localstorage/api/signin', {
             email: emailRef.current?.value,
             password: passwordRef.current?.value
         })
