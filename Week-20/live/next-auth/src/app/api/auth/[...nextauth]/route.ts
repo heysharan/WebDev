@@ -50,15 +50,8 @@ const handler = NextAuth({
         return strictUser
 
       }
-    }),
-    GoogleProvider({
-    clientId: 'GOOGLE_CLIENT_ID',
-    clientSecret: 'GOOGLE_CLIENT_SECRET'
-  })
-  ],
-  pages: {
-    signIn: '/signin',
-  }
+    })
+  ]
 })
 
 export { handler as GET, handler as POST }
