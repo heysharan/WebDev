@@ -1,13 +1,28 @@
 interface PropType {
     children: string
+    size: "small" | "medium" | "big",
+    onClick? : () => void
 }
 
+
+
 export function Button({
-    children
+    children, size, onClick
 }: PropType) {
+    let className: string
+    if(size === 'small'){
+        className = "bg-white rounded-sm flex items-center px-8 cursor-pointer"
+    }
+    else if(size === 'medium'){
+        className = "bg-white rounded-sm flex items-center justify-center px-3 text-sm font-medium cursor-pointer w-40"
+    }
+    else{
+       className = "bg-white rounded-sm flex items-center justify-center py-3 text-xl font-medium cursor-pointer w-full" 
+    }
+
     return(
-        <div className="bg-white rounded-sm flex items-center py-1 px-8 cursor-pointer">
+        <button className={className} onClick={onClick}>
             {children}
-        </div>
+        </button>
     )
 }

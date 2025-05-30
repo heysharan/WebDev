@@ -1,15 +1,23 @@
+import { ForwardedRef, forwardRef } from "react";
+
 interface PropType {
     placeholder: string,
     type: string
 }
 
-export function TextInput({
-    placeholder,
-    type
-}: PropType) {
-  return (
-    <input className="text-white pt-2 pr-3 pb-2 pl-3 mr-2 w-full focus:outline-none focus:ring-0 border border-gray-700 rounded-sm" 
-    placeholder={placeholder} type={type}>
-    </input>
-  );
-}
+
+export const TextInput = forwardRef(
+  (
+    { placeholder, type }: PropType,
+    ref: ForwardedRef<HTMLInputElement>
+  ) => {
+    return (
+      <input
+        className="py-2 px-3 mr-2 w-full focus:outline-none focus:ring-0 border text-neutral-50 border-neutral-800 rounded-sm"
+        placeholder={placeholder}
+        type={type}
+        ref={ref}
+      />
+    );
+  }
+);
