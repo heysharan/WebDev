@@ -17,6 +17,11 @@ app.get('/chat', (req, res) => {
         message: 'Hello'
     })
 })
+app.get('/healthcheck', (req, res) => {
+    res.json({
+        message: 'Hello'
+    })
+})
 
 app.listen(3000, () => {
     console.log(`Server running on PORT 3000`)
