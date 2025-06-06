@@ -22,10 +22,10 @@ export default function Home() {
                     <Button size="big">Create New Room</Button>
                     <TextInput placeholder="Enter Your Name" type="text"/>
                     <div className="flex">
-                        <TextInput ref={inputRoomRef} placeholder="Enter Room Code" type="text"/>
+                        {/* <TextInput ref={inputRoomRef} placeholder="Enter Room Code" type="text"/>
                         <Button size="medium" onClick={() => {
                             router.push(`/chat/${inputRoomRef.current!.value}`)
-                        }}>Join Room</Button>
+                        }}>Join Room</Button> */}
                     </div>
                     </div>
                 </div>
