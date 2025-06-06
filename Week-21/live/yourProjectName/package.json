@@ -1,5 +1,5 @@
 {
-  "name": "yourProjectName",
+  "name": "your-project-name",
   "private": true,
   "scripts": {
     "build": "turbo run build",
