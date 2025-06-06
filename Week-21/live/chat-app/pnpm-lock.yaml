@@ -21,7 +21,7 @@ importers:
   apps/http-server:
     dependencies:
       '@repo/typescript-config':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/express':
         specifier: ^5.0.2
@@ -88,7 +88,7 @@ importers:
   apps/ws-server:
     dependencies:
       '@repo/typescript-config':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/ws':
         specifier: ^8.18.1
