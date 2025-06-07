@@ -15,6 +15,10 @@ app.get('/chat', (req, res) => {
     res.json('Chat')
 })
 
+app.get('/healthcheck', (req, res) => {
+    res.json('Healthcheck')
+})
+
 app.listen(PORT, () => {
     console.log(`Server running on PORT - ${PORT}`)
 })
