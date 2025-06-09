@@ -23,6 +23,10 @@ app.get('/users', (req,res) => {
     res.json('users')
 })
 
+app.get('/admin',(req, res) => {
+    res.json('admin')
+} )
+
 app.listen(PORT, () => {
     console.log(`Server running on PORT - ${PORT}`)
 })
