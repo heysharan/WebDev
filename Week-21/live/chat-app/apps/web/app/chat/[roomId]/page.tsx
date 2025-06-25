@@ -31,7 +31,6 @@ export default function Chat() {
                 <div className='flex m-6'>
                     <TextInput placeholder="Type a message . . ." type="text"></TextInput>
                     <Button size="small">Send</Button>
-                    <Button size="small">Send</Button>
                 </div>
             </div>
         </div>
