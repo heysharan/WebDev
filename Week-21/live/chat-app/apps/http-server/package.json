@@ -8,7 +8,7 @@
     "dev": "npm run build && node dist/server.js"
   },
   "dependencies": {
-    "@repo/typescript-config": "workspace:*",
+    "@repo/typescript-config":"workspace:*",
     "@types/express": "^5.0.2",
     "express": "^5.1.0"
   },

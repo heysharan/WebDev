@@ -5,10 +5,9 @@ import { ChatIcon } from "@repo/ui/chat-icon"
 import { useRef } from "react"
 import { useRouter } from "next/navigation"
 
-export default function Home() {
+export default function () {
     const inputRoomRef = useRef<HTMLInputElement>(null)
     const router = useRouter();
-
   return(
     <div className='h-screen w-screen bg-black flex justify-center items-center'>
             <div className='w-164 h-76 border border-neutral-800 shadow-2xl rounded-2xl'>

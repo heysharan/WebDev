@@ -4,8 +4,6 @@ interface PropType {
     onClick? : () => void
 }
 
-
-
 export function Button({
     children, size, onClick
 }: PropType) {

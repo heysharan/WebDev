@@ -1,7 +1,15 @@
 {
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "module": "NodeNext",            // ✅ required for ESM
+    "moduleResolution": "NodeNext",  // ✅ resolves .js/.ts/.mjs correctly
+    "target": "ES2020",              // or "ESNext"
+    "outDir": "dist",
+    "declaration": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules"]
