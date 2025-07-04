@@ -135,7 +135,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/sharan/Desktop/Ubuntu/code/100xDev/Cohort3/WebDev/Week-20/live/next-auth/src/generated/prisma",
+      "value": "/home/sharan/Desktop/WebDev/Week-20/live/next-auth/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -149,7 +149,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/sharan/Desktop/Ubuntu/code/100xDev/Cohort3/WebDev/Week-20/live/next-auth/prisma/schema.prisma",
+    "sourceFilePath": "/home/sharan/Desktop/WebDev/Week-20/live/next-auth/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

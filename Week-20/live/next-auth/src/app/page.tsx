@@ -25,14 +25,24 @@
 //   )
 // }
 
-import { getServerSession } from "next-auth";
+// import { getServerSession } from "next-auth";
+
+// export default async function Home() {
+//   const session = await getServerSession();
+
+//   return(
+//     <div className="flex justify-end mt-5 mr-5">
+//       {JSON.stringify(session)}
+//     </div>
+//   )
+// }
+
+import { Appbar } from "@/components/Appbar";
 
 export default async function Home() {
-  const session = await getServerSession();
-
   return(
-    <div className="flex justify-end mt-5 mr-5">
-      {JSON.stringify(session)}
+    <div>
+      <Appbar />
     </div>
   )
 }
